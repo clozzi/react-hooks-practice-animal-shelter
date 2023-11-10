@@ -18,7 +18,8 @@ function App() {
   }
 
   function onAdoptPet(e) {
-    console.log(e.target)
+    const adopted = pets.find((pet) => pet.id === e.target.id);
+    adopted.isAdopted = true;
   }
 
   return (
